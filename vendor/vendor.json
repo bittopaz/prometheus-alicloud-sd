@@ -1,0 +1,25 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "2+1TPdvFj4W1QS5drkFr+ibM3G0=",
+			"path": "github.com/denverdino/aliyungo/common",
+			"revision": "cb2da2ef639fc7c48295e9b695b607be41700b41",
+			"revisionTime": "2017-11-27T16:30:43Z"
+		},
+		{
+			"checksumSHA1": "y4Ay4E5HqT25sweC/Bl9/odNWaI=",
+			"path": "github.com/denverdino/aliyungo/ecs",
+			"revision": "cb2da2ef639fc7c48295e9b695b607be41700b41",
+			"revisionTime": "2017-11-27T16:30:43Z"
+		},
+		{
+			"checksumSHA1": "cKVBRn7GKT+0IqfGUc/NnKDWzCw=",
+			"path": "github.com/denverdino/aliyungo/util",
+			"revision": "cb2da2ef639fc7c48295e9b695b607be41700b41",
+			"revisionTime": "2017-11-27T16:30:43Z"
+		}
+	],
+	"rootPath": "github.com/owitho/prometheus-alicloud-sd"
+}
