@@ -5,20 +5,20 @@
 		{
 			"checksumSHA1": "qvFutFkayxTxJN3E1AENo4kHEzA=",
 			"path": "github.com/denverdino/aliyungo/common",
-			"revision": "df1711e43f18d55672c2ca12b3a27a1a2d753aa6",
-			"revisionTime": "2017-12-14T00:42:06Z"
+			"revision": "c1bb8a887897ccef7612d26b6192fde453b8b50d",
+			"revisionTime": "2017-12-17T00:54:27Z"
 		},
 		{
-			"checksumSHA1": "dRCnl3Jccqs69IUO8s90ZUez/Vc=",
+			"checksumSHA1": "tsnVyJ/TM+qTGuWV97PxeOvR1Y8=",
 			"path": "github.com/denverdino/aliyungo/ecs",
-			"revision": "df1711e43f18d55672c2ca12b3a27a1a2d753aa6",
-			"revisionTime": "2017-12-14T00:42:06Z"
+			"revision": "c1bb8a887897ccef7612d26b6192fde453b8b50d",
+			"revisionTime": "2017-12-17T00:54:27Z"
 		},
 		{
 			"checksumSHA1": "cKVBRn7GKT+0IqfGUc/NnKDWzCw=",
 			"path": "github.com/denverdino/aliyungo/util",
-			"revision": "df1711e43f18d55672c2ca12b3a27a1a2d753aa6",
-			"revisionTime": "2017-12-14T00:42:06Z"
+			"revision": "c1bb8a887897ccef7612d26b6192fde453b8b50d",
+			"revisionTime": "2017-12-17T00:54:27Z"
 		}
 	],
 	"rootPath": "github.com/owitho/prometheus-alicloud-sd"
