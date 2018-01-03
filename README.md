@@ -1,5 +1,15 @@
 # prometheus-alicloud-sd
 
+## Set ALICLOUD_SD_TAGS
+
+export ALICLOUD_SD_TAGS=Service,Tier,Env,Loc
+
+## How to build
+
+```
+make bin
+```
+
 ## InstanceAttributesType example
 
 ```

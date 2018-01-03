@@ -9,6 +9,7 @@ import (
 	"regexp"
 	"sort"
 	"strconv"
+	"strings"
 
 	"github.com/denverdino/aliyungo/common"
 	"github.com/denverdino/aliyungo/ecs"
@@ -23,17 +24,15 @@ type scrapeTask struct {
 }
 
 type target struct {
-	host    string
-	env     string
-	tier    string
-	loc     string
-	service string
+	host   string
+	labels map[string]string
 }
 
 func discoveryAlicloud(filePath string) {
 	accessKeyID := os.Getenv("ALICLOUD_ACCESS_KEY")
 	accessKeySecret := os.Getenv("ALICLOUD_SECRET_KEY")
 	defaultRegion := os.Getenv("ALICLOUD_DEFAULT_REGION")
+	instanceTags := strings.Split(os.Getenv("ALICLOUD_SD_TAGS"), ",")
 	client := ecs.NewClient(accessKeyID, accessKeySecret)
 
 	region := common.Region(defaultRegion)
@@ -43,8 +42,6 @@ func discoveryAlicloud(filePath string) {
 	var pageInstances []ecs.InstanceAttributesType
 	var err error
 	var paginationResult *common.PaginationResult
-
-	//var scrapeTasks []scrapeTask
 
 	recevied := 0
 	pagination := &common.Pagination{
@@ -79,7 +76,6 @@ func discoveryAlicloud(filePath string) {
 			Pagination: *pagination,
 		}
 	}
-	//tasks := make(map[string]*scrapeTask)
 
 	var targets []target
 
@@ -87,50 +83,59 @@ func discoveryAlicloud(filePath string) {
 	for _, inst := range instances {
 		if match := validHostname.FindStringSubmatch(inst.InstanceName); match != nil {
 
-			tags := inst.Tags.Tag
-			for _, eachTag := range tags {
-				if eachTag.TagKey == "Monitoring" {
-					if tagMonitoring, err := strconv.ParseBool(eachTag.TagValue); err == nil {
-						if tagMonitoring == true {
+			ecsTags := inst.Tags.Tag
 
-							label := make(map[string]string)
-							for i, name := range validHostname.SubexpNames() {
-								if name != "" {
-									label[name] = match[i]
-								}
-							}
-
-							target := target{
-								host:    fmt.Sprintf("%s:9100", inst.InstanceName),
-								env:     label["env"],
-								tier:    label["tier"],
-								loc:     label["loc"],
-								service: label["service"],
-							}
-							targets = append(targets, target)
-
-							// label["job"] = "node"
-							// key := fmt.Sprintf("%s.%s.%s.%s", label["service"], label["tier"], label["env"], label["loc"])
-							// if _, found := tasks[key]; found {
-							// tasks[key].Targets = append(tasks[key].Targets, fmt.Sprintf("%s:9100", inst.InstanceName))
-							// } else {
-							// tasks[key] = &scrapeTask{
-							// Targets: []string{fmt.Sprintf("%s:9100", inst.InstanceName)},
-							// Labels:  label,
-							// }
-							// }
-						}
-						break
+			tmpTags := make(map[string]string)
+			tmpTags["Monitoring"] = "false"
+			for _, eachTag := range ecsTags {
+				tmpTags[eachTag.TagKey] = eachTag.TagValue
+			}
+			labels := make(map[string]string)
+			if tagMonitoring, err := strconv.ParseBool(tmpTags["Monitoring"]); err == nil {
+				if tagMonitoring == true {
+					for _, eachLabel := range instanceTags {
+						labels[eachLabel] = tmpTags[eachLabel]
 					}
+					promTarget := target{
+						host:   fmt.Sprintf("%s:9100", inst.InstanceName),
+						labels: labels,
+					}
+					targets = append(targets, promTarget)
 				}
 			}
 		}
 	}
-	// for _, value := range tasks {
-	// 	value.Targets.Sort()
-	// 	scrapeTasks = append(scrapeTasks, *value)
-	// }
-	// writeSDConfig(scrapeTasks, filePath)
+	scrapeTasks := makeScapeTasks(targets, instanceTags)
+	writeSDConfig(scrapeTasks, filePath)
+}
+
+func makeScapeTasks(targets []target, instanceTags []string) []scrapeTask {
+	var scrapeTasks []scrapeTask
+
+	tasks := make(map[string]*scrapeTask)
+
+	for _, eachTarget := range targets {
+		var values []string
+		for _, eachTag := range instanceTags {
+			values = append(values, eachTarget.labels[eachTag])
+		}
+		key := fmt.Sprintf(strings.Join(values, "."))
+		if _, found := tasks[key]; found {
+			tasks[key].Targets = append(tasks[key].Targets, eachTarget.host)
+		} else {
+			tasks[key] = &scrapeTask{
+				Targets: []string{eachTarget.host},
+				Labels:  eachTarget.labels,
+			}
+		}
+	}
+
+	for _, value := range tasks {
+		value.Targets.Sort()
+		scrapeTasks = append(scrapeTasks, *value)
+	}
+
+	return scrapeTasks
 }
 
 func writeSDConfig(scrapeTasks []scrapeTask, output string) {
@@ -148,6 +153,14 @@ func writeSDConfig(scrapeTasks []scrapeTask, output string) {
 }
 
 func main() {
-	filePath := flag.String("f", "PATH", "Output filename")
-	discoveryAlicloud(*filePath)
+	var filePath string
+	flag.StringVar(&filePath, "f", "", "Output filename")
+	flag.Parse()
+
+	if filePath == "" {
+		fmt.Fprintf(os.Stderr, "required arguments -f must pass in.")
+		os.Exit(1)
+	}
+
+	discoveryAlicloud(filePath)
 }
