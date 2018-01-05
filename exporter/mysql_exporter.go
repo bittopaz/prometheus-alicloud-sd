@@ -23,8 +23,8 @@ type Lable struct {
 }
 
 func DiscoveryAlicloudMysql(filePath string) {
-	var p []NodeInfo
-	var q NodeInfo
+	var nodeinfolist []NodeInfo
+	var nodeinfo NodeInfo
 
 	REGIONID := os.Getenv("ALICLOUD_DEFAULT_REGION")
 	ACCESSKEY := os.Getenv("ALICLOUD_ACCESS_KEY")
@@ -47,25 +47,25 @@ func DiscoveryAlicloudMysql(filePath string) {
 		panic(err)
 	}
 	for _, v := range response.Instances.Instance {
-		q.Targets = append(q.Targets, v.InstanceName+":9100")
-		q.Targets = append(q.Targets, v.InstanceName+":9104")
+		nodeinfo.Targets = append(nodeinfo.Targets, v.InstanceName+":9100")
+		nodeinfo.Targets = append(nodeinfo.Targets, v.InstanceName+":9104")
 		for _, y := range v.Tags.Tag {
 			if y.TagKey == "Env" {
-				q.Labels.Env = y.TagValue
+				nodeinfo.Labels.Env = y.TagValue
 			} else if y.TagKey == "Job" {
-				q.Labels.Job = y.TagValue
+				nodeinfo.Labels.Job = y.TagValue
 			} else if y.TagKey == "Loc" {
-				q.Labels.Loc = y.TagValue
+				nodeinfo.Labels.Loc = y.TagValue
 			} else if y.TagKey == "Service" {
-				q.Labels.Service = y.TagValue
+				nodeinfo.Labels.Service = y.TagValue
 			} else if y.TagKey == "Tier" {
-				q.Labels.Tier = y.TagValue
+				nodeinfo.Labels.Tier = y.TagValue
 			}
 		}
-		p = append(p, q)
-		q.Targets = nil
+		nodeinfolist = append(nodeinfolist, nodeinfo)
+		nodeinfo.Targets = nil
 	}
-	jsonScrapeConfig, err := json.MarshalIndent(p, "", "\t")
+	jsonScrapeConfig, err := json.MarshalIndent(nodeinfolist, "", "\t")
 	if err != nil {
 		fmt.Println("json err", err)
 	}
