@@ -158,7 +158,7 @@ func main() {
 	var filePath string
 	var nodetype string
 	flag.StringVar(&filePath, "f", "", "Output filename")
-	flag.StringVar(&nodetype, "t", "", "exporter type(system/mysql)")
+	flag.StringVar(&nodetype, "t", "", "exporter type(node/mysql)")
 	flag.Parse()
 
 	if filePath == "" {
@@ -166,7 +166,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if nodetype == "system" {
+	if nodetype == "node" {
 		discoveryAlicloud(filePath)
 	} else if nodetype == "mysql" {
 		exporter.DiscoveryAlicloudMysql(filePath)
