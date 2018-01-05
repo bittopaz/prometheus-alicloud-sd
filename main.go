@@ -11,6 +11,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/owitho/prometheus-alicloud-sd/exporter"
+
 	"github.com/denverdino/aliyungo/common"
 	"github.com/denverdino/aliyungo/ecs"
 )
@@ -154,7 +156,9 @@ func writeSDConfig(scrapeTasks []scrapeTask, output string) {
 
 func main() {
 	var filePath string
+	var nodetype string
 	flag.StringVar(&filePath, "f", "", "Output filename")
+	flag.StringVar(&nodetype, "t", "", "exporter type(system/mysql)")
 	flag.Parse()
 
 	if filePath == "" {
@@ -162,5 +166,12 @@ func main() {
 		os.Exit(1)
 	}
 
-	discoveryAlicloud(filePath)
+	if nodetype == "system" {
+		discoveryAlicloud(filePath)
+	} else if nodetype == "mysql" {
+		exporter.DiscoveryAlicloudMysql(filePath)
+	} else if nodetype == "" {
+		fmt.Fprintf(os.Stderr, "required arguments -t must pass in.")
+		os.Exit(1)
+	}
 }
