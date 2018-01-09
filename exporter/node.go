@@ -17,7 +17,7 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 	totalcount := GetInstancesTotalCount(exporterType)
 
 	for i := 0; i <= (totalcount / PAGESIZE); i++ {
-		//fmt.Println(i)
+		fmt.Println(i)
 		request := ecs.CreateDescribeInstancesRequest()
 		request.PageSize = requests.NewInteger(PAGESIZE)
 		request.PageNumber = requests.NewInteger(i + 1)
@@ -46,7 +46,7 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 			}
 
 			for m, n := range nodeinfolist {
-				if n.Labels.Env == nodeinfo.Labels.Env && n.Labels.Service == nodeinfo.Labels.Service {
+				if n.Labels.Env == nodeinfo.Labels.Env && n.Labels.Service == nodeinfo.Labels.Service && n.Labels.Service != "" {
 					nodeinfolist[m].Targets = append(nodeinfolist[m].Targets, v.InstanceName+":9100")
 					flag = true
 					break
@@ -59,6 +59,11 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 				nodeinfolist = append(nodeinfolist, nodeinfo)
 			}
 			nodeinfo.Targets = nil
+			nodeinfo.Labels.Env = ""
+			nodeinfo.Labels.Job = ""
+			nodeinfo.Labels.Loc = ""
+			nodeinfo.Labels.Service = ""
+			nodeinfo.Labels.Tier = ""
 		}
 	}
 	jsonScrapeConfig, err := json.MarshalIndent(nodeinfolist, "", "\t")

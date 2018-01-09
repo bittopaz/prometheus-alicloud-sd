@@ -48,7 +48,7 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 			}
 
 			for m, n := range nodeinfolist {
-				if n.Labels.Env == nodeinfo.Labels.Env && n.Labels.Service == nodeinfo.Labels.Service {
+				if n.Labels.Env == nodeinfo.Labels.Env && n.Labels.Service == nodeinfo.Labels.Service && n.Labels.Service != "" {
 					nodeinfolist[m].Targets = append(nodeinfolist[m].Targets, v.InstanceName+":9100")
 					nodeinfolist[m].Targets = append(nodeinfolist[m].Targets, v.InstanceName+":9104")
 					flag = true
@@ -64,6 +64,11 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 				nodeinfolist = append(nodeinfolist, nodeinfo)
 			}
 			nodeinfo.Targets = nil
+			nodeinfo.Labels.Env = ""
+			nodeinfo.Labels.Job = ""
+			nodeinfo.Labels.Loc = ""
+			nodeinfo.Labels.Service = ""
+			nodeinfo.Labels.Tier = ""
 		}
 	}
 	jsonScrapeConfig, err := json.MarshalIndent(nodeinfolist, "", "\t")
