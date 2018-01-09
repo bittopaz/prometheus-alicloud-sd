@@ -14,7 +14,7 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 	var nodeinfo NodeInfo
 	var flag bool = false
 	ecsClient := EcsClient()
-	totalcount := GetInstancsTotalCount(exporterType)
+	totalcount := GetInstancesTotalCount(exporterType)
 
 	for i := 0; i <= (totalcount / PAGESIZE); i++ {
 		//fmt.Println(i)

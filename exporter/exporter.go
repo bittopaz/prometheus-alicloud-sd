@@ -37,7 +37,7 @@ func EcsClient() (client *ecs.Client) {
 	return ecsClient
 }
 
-func GetInstancsTotalCount(exportertype string) (totalcount int) {
+func GetInstancesTotalCount(exportertype string) (totalcount int) {
 	ecsClient := EcsClient()
 	request := ecs.CreateDescribeInstancesRequest()
 	if exportertype == "node" {

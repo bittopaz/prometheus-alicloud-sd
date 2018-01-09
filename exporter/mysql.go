@@ -14,7 +14,7 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 	var nodeinfo NodeInfo
 	var flag bool = false
 
-	totalcount := GetInstancsTotalCount(exporterType)
+	totalcount := GetInstancesTotalCount(exporterType)
 	ecsClient := EcsClient()
 
 	for i := 0; i <= (totalcount / PAGESIZE); i++ {
