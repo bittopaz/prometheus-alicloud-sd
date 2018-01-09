@@ -1,21 +1,29 @@
 package main
 
 import (
-	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"os"
-	"regexp"
-	"sort"
-	"strconv"
-	"strings"
 
-	"github.com/owitho/prometheus-alicloud-sd/exporter"
-
-	"github.com/denverdino/aliyungo/common"
-	"github.com/denverdino/aliyungo/ecs"
+	"github.com/tinglinux/prometheus-alicloud-sd/exporter"
 )
+
+/*
+//import
+"encoding/json"
+"flag"
+"fmt"
+"io/ioutil"
+"os"
+"regexp"
+"sort"
+"strconv"
+"strings"
+
+"github.com/tinglinux/prometheus-alicloud-sd/exporter"
+
+"github.com/denverdino/aliyungo/common"
+"github.com/denverdino/aliyungo/ecs"
 
 // PageSize is limited 50 from official
 const PageSize = 50
@@ -153,12 +161,13 @@ func writeSDConfig(scrapeTasks []scrapeTask, output string) {
 		panic(err)
 	}
 }
+*/
 
 func main() {
 	var filePath string
-	var nodetype string
+	var exporterType string
 	flag.StringVar(&filePath, "f", "", "Output filename")
-	flag.StringVar(&nodetype, "t", "", "exporter type(node/mysql)")
+	flag.StringVar(&exporterType, "t", "", "exporter type(node/mysql)")
 	flag.Parse()
 
 	if filePath == "" {
@@ -166,11 +175,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	if nodetype == "node" {
-		discoveryAlicloud(filePath)
-	} else if nodetype == "mysql" {
-		exporter.DiscoveryAlicloudMysql(filePath)
-	} else if nodetype == "" {
+	if exporterType == "node" {
+		exporter.DiscoveryAlicloudNode(filePath, exporterType)
+	} else if exporterType == "mysql" {
+		exporter.DiscoveryAlicloudMysql(filePath, exporterType)
+	} else if exporterType == "" {
 		fmt.Fprintf(os.Stderr, "required arguments -t must pass in.")
 		os.Exit(1)
 	}
