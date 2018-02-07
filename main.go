@@ -3,8 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/owitho/prometheus-alicloud-sd/exporter"
 	"os"
+
+	"github.com/leo1971/prometheus-alicloud-sd/exporter"
 )
 
 func main() {

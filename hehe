@@ -1,0 +1,4157 @@
+[
+	{
+		"targets": [
+			"mysql-obi-report-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-obi-report",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"sms-center-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"sms-center-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"sms-center-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sms-center-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"es-index-job-executor-2.sv.prod.alsh.xingbianli.com:9100",
+			"es-index-job-executor-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "es-index-job-executor",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"ad-service-1.inf.prod.alsh.intra.im:9100",
+			"ad-service-2.inf.prod.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "ad-service",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"devkube-3.sv.beta.alsh.xingbianli.com:9100",
+			"devkube-2.sv.beta.alsh.xingbianli.com:9100",
+			"devkube-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "devkube",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-miniprogram-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-miniprogram-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"cypher-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "cypher",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-job-executor-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-job-executor",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"scm-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-perm-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"sso-perm-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-perm-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-perm-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"sso-perm-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-perm-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"awesome-crm-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"awesome-crm-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "awesome-crm-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"awesome-crm-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"awesome-crm-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "awesome-crm-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-mapi-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"pay-mapi-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-mapi-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"bigdata-cook-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "bigdata-cook-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-job-executor-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-job-executor",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"rack-job-executor-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "rack-job-executor",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"rack-job-admin-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "rack-job-admin",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"raphael-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"raphael-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "raphael-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sardine-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sardine-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"argos-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "argos-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"raphael-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "raphael-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coupon-biz-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"coupon-biz-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coupon-biz-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"wms-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"wms-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"wms-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"wms-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "wms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-pda-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"beehive-pda-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-pda-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-stock-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"beehive-stock-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-stock-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-oss-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"beehive-oss-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"beehive-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-base-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"beehive-base-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-xtools-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"beehive-xtools-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-xtools-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-member-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-member-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-member-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-member-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-member-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-media-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-media-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-media-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"flume-2.sv.dat.alsh.intra.im:9100",
+			"flume-1.sv.dat.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "flume",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"hui-coupon-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"hui-coupon-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"hui-coupon-service-3.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "hui-coupon-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"hui-rule-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"hui-rule-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"hui-rule-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "hui-rule-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"es-index-job-executor-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "es-index-job-executor",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-member-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-member-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-member-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"platform-coupon-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"platform-coupon-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"platform-coupon-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "platform-coupon-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"ad-service-1.inf.beta.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "ad-service",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"test-ad-1.inf.aux.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "aux",
+			"job": "node",
+			"loc": "alsh",
+			"service": "test-ad",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"openrack-reconciliation-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-reconciliation-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sms-center-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sms-center-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-mapi-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-mapi-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"bigdata-mc-web-1.sv.prod.alsh.intra.im:9100",
+			"bigdata-mc-web-2.sv.prod.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "bigdata-mc-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"test-redis-1.sv.dat.alsh.xingbianli.com:9100",
+			"test-redis-2.sv.dat.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "test-redis",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sediment-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"sediment-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sediment-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-web-4.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-web-3.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-ifr-common-2.db.prod.alsh.xingbianli.com:9100",
+			"mysql-ifr-common-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-ifr-common",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"store-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-perm-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-perm-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-perm-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-perm-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sediment-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sediment-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-cashier-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-cashier-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"dev-sso-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "dev-sso",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-pda-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-pda-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-pda-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"bigdata-mc-web-1.sv.beta.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "bigdata-mc-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"user-profile-1.sv.dat.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "user-profile",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-member-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-member-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"hawkeye-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "hawkeye-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"hawkeye-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"hawkeye-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "hawkeye-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"ad-2.inf.aux.alsh.intra.im:9100",
+			"ad-1.inf.aux.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "aux",
+			"job": "node",
+			"loc": "alsh",
+			"service": "ad",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"goods-base-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"goods-base-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "goods-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"goods-oss-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"goods-oss-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "goods-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"goods-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"goods-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "goods-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"goods-order-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"goods-order-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "goods-order-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"ticket-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"ticket-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "ticket-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"ticket-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"ticket-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "ticket-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"cat-2.sv.beta.alsh.xingbianli.com:9100",
+			"cat-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "cat",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"ad-connect-1.inf.aux.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "aux",
+			"job": "node",
+			"loc": "alsh",
+			"service": "ad-connect",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"coupon-biz-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coupon-biz-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-gate-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"pay-gate-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"pay-gate-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"pay-gate-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-gate-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"cat-5.sv.prod.alsh.xingbianli.com:9100",
+			"cat-4.sv.prod.alsh.xingbianli.com:9100",
+			"cat-1.sv.prod.alsh.xingbianli.com:9100",
+			"cat-2.sv.prod.alsh.xingbianli.com:9100",
+			"cat-3.sv.prod.alsh.xingbianli.com:9100",
+			"cat-2.sv.prod.alsh.xingbianli.com:9100",
+			"cat-3.sv.prod.alsh.xingbianli.com:9100",
+			"cat-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "cat",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"xxl-job-admin-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "xxl-job-admin",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"sso-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-oss-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-xtools-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-xtools-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-pda-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-pda-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-base-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"beehive-stock-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "beehive-stock-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"press-test-wms-2.sv.beta.alsh.xingbianli.com:9100",
+			"press-test-wms-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "press-test-wms",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"ticket-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "ticket-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coupon-template-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coupon-template-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"ticket-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "ticket-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-oss-web-3.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-oss-web-4.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-oss-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-oss-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-customer-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-customer-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-customer-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-customer-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-customer-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-invoice-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-invoice-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-invoice-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"takeout-delivery-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"takeout-delivery-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "takeout-delivery-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"itcc-1.inf.prod.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "itcc",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"kylin-autoreplenish-job-2.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-autoreplenish-job-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-autoreplenish-job",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"logistics-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"logistics-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "logistics-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"logistics-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "logistics-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-statistics-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-statistics-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-statistics-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-statistics-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-statistics-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-rak-stat-2.db.prod.alsh.xingbianli.com:9100",
+			"mysql-rak-stat-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-rak-stat",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"redis-2.sv.dat.alsh.xingbianli.com:9100",
+			"redis-1.sv.dat.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "redis",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"test-hdfs-3.sv.dat.alsh.xingbianli.com:9100",
+			"test-hdfs-2.sv.dat.alsh.xingbianli.com:9100",
+			"test-hdfs-1.sv.dat.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "test-hdfs",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-web-2.sv.beta.alsh.xingbianli.com:9100",
+			"sso-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"gitlab-runner-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "gitlab-runner",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"takeout-delivery-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "takeout-delivery-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-pda-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-pda-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-gate-wx-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"pay-gate-wx-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-gate-wx-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-gate-common-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"pay-gate-common-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-gate-common-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-gate-alipay-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"pay-gate-alipay-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-gate-alipay-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"message-query-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"message-query-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "message-query-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"message-api-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"message-api-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "message-api-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"neo-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "neo",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-stat-web-3.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-stat-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-stat-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-stat-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-stat-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-stat-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-autoreplenish-job-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-autoreplenish-job",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"rack-job-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "rack-job",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"message-api-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "message-api-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"guanyuan-bastion-1.sv.dat.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "guanyuan-bastion",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"guanyuan-2.sv.dat.alsh.intra.im:9100",
+			"guanyuan-3.sv.dat.alsh.intra.im:9100",
+			"guanyuan-1.sv.dat.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "guanyuan",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"budget-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"budget-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "budget-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"rack-job-admin-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "rack-job-admin",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"rack-job-executor-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "rack-job-executor",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mapi-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"mapi-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mapi-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"marketing-service-5.sv.prod.alsh.xingbianli.com:9100",
+			"marketing-service-6.sv.prod.alsh.xingbianli.com:9100",
+			"marketing-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"marketing-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"marketing-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"marketing-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "marketing-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-invoice-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-invoice-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mapi-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mapi-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"poi-base-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"poi-base-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "poi-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"account-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"account-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "account-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"account-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "account-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"message-query-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "message-query-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-gate-wx-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-gate-wx-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-gate-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-gate-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-gate-common-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-gate-common-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-gate-alipay-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-gate-alipay-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-common-service-2.sv.beta.alsh.xingbianli.com:9100",
+			"openrack-common-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-common-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"poi-base-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "poi-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-seckill-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-seckill-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-seckill-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-seckill-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-seckill-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-seckill-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-rak-seckill-1.db.prod.alsh.xingbianli.com:9100",
+			"mysql-rak-seckill-2.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-rak-seckill",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"mysql-xoa-common-2.db.prod.alsh.xingbianli.com:9100",
+			"mysql-xoa-common-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-xoa-common",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"budget-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "budget-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"taichi-workflow-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"taichi-workflow-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "taichi-workflow-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"jingang-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"jingang-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "jingang-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"redis-2c4g-2.db.beta.alsh.xingbianli.com:9100",
+			"redis-2c4g-1.db.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "redis-2c4g",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"mayihezi-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mayihezi-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"redis-32g-1.db.beta.alsh.xingbianli.com:9100",
+			"redis-32g-2.db.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "redis-32g",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"mysql-rak-common-1.db.prod.alsh.xingbianli.com:9100",
+			"mysql-rak-common-2.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-rak-common",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"neo4j-1.sv.dat.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "neo4j",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-address-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-address-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-address-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"hdfs-nn-2.sv.dat.alsh.xingbianli.com:9100",
+			"hdfs-nn-1.sv.dat.alsh.xingbianli.com:9100",
+			"hdfs-nn-3.sv.dat.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "hdfs-nn",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kafka-2.sv.dat.alsh.xingbianli.com:9100",
+			"kafka-1.sv.dat.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kafka",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"hdfs-dn-6.db.dat.alsh.intra.im:9100",
+			"hdfs-dn-5.db.dat.alsh.intra.im:9100",
+			"hdfs-dn-3.db.dat.alsh.intra.im:9100",
+			"hdfs-dn-1.db.dat.alsh.intra.im:9100",
+			"hdfs-dn-4.db.dat.alsh.intra.im:9100",
+			"hdfs-dn-2.db.dat.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "hdfs-dn",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"datax-1.sv.dat.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "datax",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"workbench-1.sv.dat.alsh.intra.im:9100"
+		],
+		"lables": {
+			"env": "dat",
+			"job": "node",
+			"loc": "alsh",
+			"service": "workbench",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"awesome-crm-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "awesome-crm-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"awesome-crm-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "awesome-crm-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pay-cashier-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"pay-cashier-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"pay-cashier-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"pay-cashier-service-4.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pay-cashier-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-address-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-address-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"prometheus-1.inf.aux.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "aux",
+			"job": "node",
+			"loc": "alsh",
+			"service": "prometheus",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"openrack-seckill-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-seckill-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-seckill-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-seckill-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-media-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-media-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"redis-4.sv.beta.alsh.xingbianli.com:9100",
+			"redis-1.sv.beta.alsh.xingbianli.com:9100",
+			"redis-5.sv.beta.alsh.xingbianli.com:9100",
+			"redis-3.sv.beta.alsh.xingbianli.com:9100",
+			"redis-6.sv.beta.alsh.xingbianli.com:9100",
+			"redis-2.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "redis",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"explore-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"explore-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"explore-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"explore-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "explore-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-user-web-3.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-user-web-4.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-user-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-user-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-user-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"account-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"account-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"account-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"account-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "account-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-statistics-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-statistics-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"commercial-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"commercial-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "commercial-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"commercial-account-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"commercial-account-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "commercial-account-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"danzan-owitho-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "danzan-owitho",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"logistics-base-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"logistics-base-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "logistics-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"platform-budget-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"platform-budget-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "platform-budget-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"message-center-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"message-center-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "message-center-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"push-app-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"push-app-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "push-app-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"platform-budget-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "platform-budget-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"taichi-workflow-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "taichi-workflow-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"jenkslave-1.inf.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "jenkslave",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"mysql-rak-explore-1.db.prod.alsh.xingbianli.com:9100",
+			"mysql-rak-explore-2.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-rak-explore",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"jingang-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "jingang-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"platform-coupon-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "platform-coupon-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-common-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-common-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-common-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-common-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-common-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-catreport-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-catreport-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"logistics-base-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "logistics-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"goods-base-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "goods-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"goods-order-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "goods-order-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"goods-oss-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "goods-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"goods-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "goods-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"push-app-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "push-app-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"message-center-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "message-center-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-rak-welfare-2.db.prod.alsh.xingbianli.com:9100",
+			"mysql-rak-welfare-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-rak-welfare",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"mysql-rak-order-1.db.prod.alsh.xingbianli.com:9100",
+			"mysql-rak-order-2.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-rak-order",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"mysql-rak-marketing-1.db.prod.alsh.xingbianli.com:9100",
+			"mysql-rak-marketing-2.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-rak-marketing",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"app-unientry-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"app-unientry-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "app-unientry-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"explore-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "explore-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"paycashier-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"paycashier-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "paycashier-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"commercial-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "commercial-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"commercial-account-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "commercial-account-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"app-unientry-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "app-unientry-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-dat-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-dat",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"paycashier-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "paycashier-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"rack-paynotify-mq-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"rack-paynotify-mq-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "rack-paynotify-mq-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-job-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-job",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-scm-1.db.prod.alsh.xingbianli.com:9100",
+			"mysql-scm-2.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-scm",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"sso-wms-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-wms-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"order-service-3.sv.prod.alsh.xingbianli.com:9100",
+			"order-service-4.sv.prod.alsh.xingbianli.com:9100",
+			"order-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"order-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "order-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"account-thirdparty-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"account-thirdparty-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "account-thirdparty-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"groupon-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-oss-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"groupon-oss-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-base-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"groupon-base-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-order-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"groupon-order-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-order-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"rack-paynotify-mq-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "rack-paynotify-mq-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-cen-1.db.prod.alsh.xingbianli.com:9100",
+			"mysql-cen-2.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-cen",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"mysql-qry-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-qry",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"openrack-user-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-user-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"wms-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"wms-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "wms-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"account-thirdparty-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "account-thirdparty-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"order-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "order-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-data-analysis-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-data-analysis-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-data-analysis-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"xclient-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "xclient-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-base-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-order-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-order-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-data-analysis-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-data-analysis-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-scm-stock-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-scm-stock-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-scm-stock-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"groupon-oss-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "groupon-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-scm-stock-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-scm-stock-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-wms-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-wms-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"honeycomb-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"honeycomb-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "honeycomb-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"marketing-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "marketing-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"night-walker-core-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"night-walker-core-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "night-walker-core-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"night-walker-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"night-walker-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "night-walker-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-bi-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql-bi",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"kylin-coupon-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-coupon-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-coupon-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-takeout-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-takeout-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-takeout-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-takeout-admin-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-takeout-admin-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-takeout-admin-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-takeout-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-takeout-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-takeout-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"honeycomb-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "honeycomb-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"night-walker-core-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "night-walker-core-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"night-walker-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "night-walker-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"wms-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "wms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"wms-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "wms-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-2.db.prod.alsh.xingbianli.com:9100",
+			"mysql-1.db.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"store-takeout-admin-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-takeout-admin-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-takeout-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-takeout-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"tms-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"tms-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "tms-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-commodity-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-commodity-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-commodity-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-stock-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-stock-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-stock-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-coupon-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-coupon-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-scm-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-scm-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-scm-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-wmsadapter-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-wmsadapter-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-wmsadapter-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-oms-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-oms-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-oms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-tms-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-tms-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-tms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-takeout-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-takeout-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-stock-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-stock-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-commodity-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-commodity-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-sonar-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-sonar-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-oms-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-oms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-wmsadapter-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-wmsadapter-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-tms-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-tms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"mysql-1.db.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "mysql",
+			"tier": "db"
+		}
+	},
+	{
+		"targets": [
+			"tms-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "tms-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"welfare-oss-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"welfare-oss-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "welfare-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"welfare-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"welfare-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "welfare-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"welfare-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "welfare-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"welfare-oss-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "welfare-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-scm-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-scm-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"burlak-static-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"burlak-static-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "burlak-static-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"burlak-static-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"burlak-static-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "burlak-static-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-data-analysis-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-data-analysis-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-data-analysis-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-data-analysis-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-data-analysis-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"crm-base-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"crm-base-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "crm-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-job-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-job",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-stock-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"scm-stock-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-stock-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"supplier-portal-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"supplier-portal-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "supplier-portal-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-supplier-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-supplier-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-stock-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-stock-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coffee-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"coffee-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coffee-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"crm-base-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "crm-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pms-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"pms-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"tms-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"tms-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "tms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"supplier-portal-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "supplier-portal-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sso-supplier-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sso-supplier-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"wmshelper-adapter-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"wmshelper-adapter-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "wmshelper-adapter-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coffee-base-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"coffee-base-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coffee-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coffee-oss-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"coffee-oss-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coffee-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-order-biz-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-order-biz-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-order-biz-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"wmshelper-adapter-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "wmshelper-adapter-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coffee-netty-1.sv.prod.alsh.xingbianli.com:9100",
+			"coffee-netty-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coffee-netty",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sc-controller-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sc-controller-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"tms-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "tms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"pms-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "pms-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"sc-controller-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "sc-controller-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-order-biz-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-order-biz-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-base-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"openrack-base-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-comm-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"scm-comm-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-comm-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"comm-search-service-2.sv.prod.alsh.xingbianli.com:9100",
+			"comm-search-service-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "comm-search-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coffee-base-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coffee-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coffee-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coffee-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coffee-netty-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coffee-netty",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"coffee-oss-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "coffee-oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"openrack-base-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "openrack-base-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-dashboard-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"kylin-dashboard-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-dashboard-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"burlak-static-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "burlak-static-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"burlak-static-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "burlak-static-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"hui-rule-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "hui-rule-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"comm-search-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "comm-search-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-comm-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-comm-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"danzan-1.sv.prod.alsh.xingbianli.com:9100",
+			"danzan-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "danzan",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-hq-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"store-hq-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-hq-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"eslshop-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "eslshop-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-sc-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-sc-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-sc-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-order-service-1.sv.prod.alsh.xingbianli.com:9100",
+			"store-order-service-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-order-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"danzan-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "danzan",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"spider-commodity-web-1.sv.prod.alsh.xingbianli.com:9100",
+			"spider-commodity-web-2.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "spider-commodity-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"marketing-sharp-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "marketing-sharp-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"spider-commodity-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "spider-commodity-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-member-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-member-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"account-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "account-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"oss-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "oss-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-dashboard-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-dashboard-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-hq-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-hq-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-web-2.sv.prod.alsh.xingbianli.com:9100",
+			"scm-web-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-sc-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-sc-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"store-order-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "store-order-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"wms-proxy-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "wms-proxy-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"eslshop-web-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "eslshop-web",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"scm-archive-service-1.sv.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "scm-archive-service",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"kylin-job-1.sv.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "kylin-job",
+			"tier": "sv"
+		}
+	},
+	{
+		"targets": [
+			"zk-3.inf.prod.alsh.xingbianli.com:9100",
+			"zk-2.inf.prod.alsh.xingbianli.com:9100",
+			"zk-1.inf.prod.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "prod",
+			"job": "node",
+			"loc": "alsh",
+			"service": "zk",
+			"tier": "inf"
+		}
+	},
+	{
+		"targets": [
+			"zk-1.inf.beta.alsh.xingbianli.com:9100"
+		],
+		"lables": {
+			"env": "beta",
+			"job": "node",
+			"loc": "alsh",
+			"service": "zk",
+			"tier": "inf"
+		}
+	}
+]
