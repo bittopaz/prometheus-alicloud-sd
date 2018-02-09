@@ -3,10 +3,20 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "+OtKmkvfF4h9MBCsqqzoA0A84Og=",
+			"path": "github.com/aliyun/alibaba-cloud-sdk-go",
+			"revision": "e399f6b46be05fa16a969043dde5473f32f97f7c",
+			"revisionTime": "2018-01-31T09:28:39Z",
+			"version": "0.11.1",
+			"versionExact": "0.11.1"
+		},
+		{
 			"checksumSHA1": "r9hFpTkLgzJw3Ye8CihmFrxxptk=",
 			"path": "github.com/aliyun/alibaba-cloud-sdk-go/sdk",
-			"revision": "11fdb4bb420be1cd7b9212bca730082b8da4f224",
-			"revisionTime": "2018-02-07T07:08:25Z"
+			"revision": "e399f6b46be05fa16a969043dde5473f32f97f7c",
+			"revisionTime": "2018-01-31T09:28:39Z",
+			"version": "0.11.1",
+			"versionExact": "0.11.1"
 		},
 		{
 			"checksumSHA1": "svQn/TEDnLCUANYC9eQv2Q555ME=",
@@ -17,14 +27,18 @@
 		{
 			"checksumSHA1": "mir9zgkLR7muF4aPQtTV9T91B7E=",
 			"path": "github.com/aliyun/alibaba-cloud-sdk-go/sdk/auth/credentials",
-			"revision": "11fdb4bb420be1cd7b9212bca730082b8da4f224",
-			"revisionTime": "2018-02-07T07:08:25Z"
+			"revision": "e399f6b46be05fa16a969043dde5473f32f97f7c",
+			"revisionTime": "2018-01-31T09:28:39Z",
+			"version": "0.11.1",
+			"versionExact": "0.11.1"
 		},
 		{
 			"checksumSHA1": "lI2JY7BIStPuDfZAV7zi4eDsBSc=",
 			"path": "github.com/aliyun/alibaba-cloud-sdk-go/sdk/auth/signers",
-			"revision": "11fdb4bb420be1cd7b9212bca730082b8da4f224",
-			"revisionTime": "2018-02-07T07:08:25Z"
+			"revision": "e399f6b46be05fa16a969043dde5473f32f97f7c",
+			"revisionTime": "2018-01-31T09:28:39Z",
+			"version": "0.11.1",
+			"versionExact": "0.11.1"
 		},
 		{
 			"checksumSHA1": "HlV8WDS8sLwaAgVvglWPfgYgp6M=",
@@ -35,50 +49,40 @@
 		{
 			"checksumSHA1": "4WM1aySX9FhbkQcn8Ofy/2NVXJI=",
 			"path": "github.com/aliyun/alibaba-cloud-sdk-go/sdk/errors",
-			"revision": "11fdb4bb420be1cd7b9212bca730082b8da4f224",
-			"revisionTime": "2018-02-07T07:08:25Z"
+			"revision": "e399f6b46be05fa16a969043dde5473f32f97f7c",
+			"revisionTime": "2018-01-31T09:28:39Z",
+			"version": "0.11.1",
+			"versionExact": "0.11.1"
 		},
 		{
 			"checksumSHA1": "pZlGALRRT2Nc0MMAtLh8X8CJWiA=",
 			"path": "github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests",
-			"revision": "11fdb4bb420be1cd7b9212bca730082b8da4f224",
-			"revisionTime": "2018-02-07T07:08:25Z"
+			"revision": "e399f6b46be05fa16a969043dde5473f32f97f7c",
+			"revisionTime": "2018-01-31T09:28:39Z",
+			"version": "0.11.1",
+			"versionExact": "0.11.1"
 		},
 		{
 			"checksumSHA1": "v/whwf9WIBsysK2Y9oTiM7+advA=",
 			"path": "github.com/aliyun/alibaba-cloud-sdk-go/sdk/responses",
-			"revision": "11fdb4bb420be1cd7b9212bca730082b8da4f224",
-			"revisionTime": "2018-02-07T07:08:25Z"
+			"revision": "e399f6b46be05fa16a969043dde5473f32f97f7c",
+			"revisionTime": "2018-01-31T09:28:39Z",
+			"version": "0.11.1",
+			"versionExact": "0.11.1"
 		},
 		{
 			"checksumSHA1": "9xtluhu3ahnEG5kEFzEF1yGzkCs=",
 			"path": "github.com/aliyun/alibaba-cloud-sdk-go/sdk/utils",
-			"revision": "11fdb4bb420be1cd7b9212bca730082b8da4f224",
-			"revisionTime": "2018-02-07T07:08:25Z"
+			"revision": "e399f6b46be05fa16a969043dde5473f32f97f7c",
+			"revisionTime": "2018-01-31T09:28:39Z",
+			"version": "0.11.1",
+			"versionExact": "0.11.1"
 		},
 		{
 			"checksumSHA1": "1fz608m/YEWjP5/h0F52RIIZy3k=",
 			"path": "github.com/aliyun/alibaba-cloud-sdk-go/services/ecs",
 			"revision": "11fdb4bb420be1cd7b9212bca730082b8da4f224",
 			"revisionTime": "2018-02-07T07:08:25Z"
-		},
-		{
-			"checksumSHA1": "qvFutFkayxTxJN3E1AENo4kHEzA=",
-			"path": "github.com/denverdino/aliyungo/common",
-			"revision": "c1bb8a887897ccef7612d26b6192fde453b8b50d",
-			"revisionTime": "2017-12-17T00:54:27Z"
-		},
-		{
-			"checksumSHA1": "tsnVyJ/TM+qTGuWV97PxeOvR1Y8=",
-			"path": "github.com/denverdino/aliyungo/ecs",
-			"revision": "c1bb8a887897ccef7612d26b6192fde453b8b50d",
-			"revisionTime": "2017-12-17T00:54:27Z"
-		},
-		{
-			"checksumSHA1": "cKVBRn7GKT+0IqfGUc/NnKDWzCw=",
-			"path": "github.com/denverdino/aliyungo/util",
-			"revision": "c1bb8a887897ccef7612d26b6192fde453b8b50d",
-			"revisionTime": "2017-12-17T00:54:27Z"
 		},
 		{
 			"checksumSHA1": "blwbl9vPvRLtL5QlZgfpLvsFiZ4=",
@@ -93,11 +97,13 @@
 			"revisionTime": "2018-02-05T15:45:42Z"
 		},
 		{
-			"checksumSHA1": "eDQ6f1EsNf+frcRO/9XukSEchm8=",
+			"checksumSHA1": "1myjT8gKwUI3WNE5a/85jNPL8Fo=",
 			"path": "github.com/satori/go.uuid",
-			"revision": "36e9d2ebbde5e3f13ab2e25625fd453271d6522e",
-			"revisionTime": "2018-01-03T17:44:51Z"
+			"revision": "879c5887cd475cd7864858769793b2ceb0d44feb",
+			"revisionTime": "2016-06-07T14:43:47Z",
+			"version": "v1.1.0",
+			"versionExact": "v1.1.0"
 		}
 	],
-	"rootPath": "git.intra.im/devops/prometheus-alicloud-sd"
+	"rootPath": "github.com/owitho/prometheus-alicloud-sd"
 }

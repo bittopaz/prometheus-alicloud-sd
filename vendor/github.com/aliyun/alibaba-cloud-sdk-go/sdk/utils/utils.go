@@ -20,16 +20,15 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"github.com/satori/go.uuid"
 	"net/url"
 	"reflect"
 	"strconv"
 	"time"
-
-	"github.com/satori/go.uuid"
 )
 
 func GetUUIDV4() (uuidHex string) {
-	uuidV4, _ := uuid.NewV4()
+	uuidV4 := uuid.NewV4()
 	uuidHex = hex.EncodeToString(uuidV4.Bytes())
 	return
 }
