@@ -10,7 +10,7 @@ import (
 )
 
 func DiscoveryAlicloudNode(filePath, exporterType string) {
-	var nodeinfolist []NodeInfo
+	var nodeInfoList []NodeInfo
 	var nodeinfo NodeInfo
 	var flag bool = false
 	ecsClient := EcsClient()
@@ -20,7 +20,9 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 		request := ecs.CreateDescribeInstancesRequest()
 		request.PageSize = requests.NewInteger(PAGESIZE)
 		request.PageNumber = requests.NewInteger(i + 1)
+		request.Status = "Running"
 		request.Tag3Key = "Monitoring"
+		request.Tag3Value = "true"
 		response, err := ecsClient.DescribeInstances(request)
 		if err != nil {
 			fmt.Println(err)
@@ -42,9 +44,9 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 				}
 			}
 
-			for m, n := range nodeinfolist {
+			for m, n := range nodeInfoList {
 				if n.Labels.Env == nodeinfo.Labels.Env && n.Labels.Service == nodeinfo.Labels.Service && n.Labels.Service != "" {
-					nodeinfolist[m].Targets = append(nodeinfolist[m].Targets, v.InstanceName+":9100")
+					nodeInfoList[m].Targets = append(nodeInfoList[m].Targets, v.InstanceName+":9100")
 					flag = true
 					break
 				} else {
@@ -53,7 +55,7 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 			}
 			if flag == false {
 				nodeinfo.Targets = append(nodeinfo.Targets, v.InstanceName+":9100")
-				nodeinfolist = append(nodeinfolist, nodeinfo)
+				nodeInfoList = append(nodeInfoList, nodeinfo)
 			}
 			nodeinfo.Targets = nil
 			nodeinfo.Labels.Env = ""
@@ -62,7 +64,7 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 			nodeinfo.Labels.Service = ""
 		}
 	}
-	jsonScrapeConfig, err := json.MarshalIndent(nodeinfolist, "", "\t")
+	jsonScrapeConfig, err := json.MarshalIndent(nodeInfoList, "", "\t")
 
 	if err != nil {
 		fmt.Println("json err", err)
