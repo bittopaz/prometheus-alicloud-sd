@@ -1,9 +1,13 @@
 package exporter
 
 import (
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"net/http"
 	"os"
 
+	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/ecs"
 )
 
@@ -22,19 +26,65 @@ type Lable struct {
 	Tier    string `json:"tier"`
 }
 
+type Instance struct {
+	REGIONID  string
+	ACCESSKEY string
+	SECRETKEY string
+	TOKEN     string
+}
+
 func EcsClient() (client *ecs.Client) {
-	REGIONID := os.Getenv("ALICLOUD_DEFAULT_REGION")
-	ACCESSKEY := os.Getenv("ALICLOUD_ACCESS_KEY")
-	SECRETKEY := os.Getenv("ALICLOUD_SECRET_KEY")
-	ecsClient, err := ecs.NewClientWithAccessKey(
-		REGIONID,
-		ACCESSKEY,
-		SECRETKEY,
-	)
-	if err != nil {
-		panic(err)
+	var i Instance
+	var err error
+	if os.Getenv("ALICLOUD_DEFAULT_REGION") == "" {
+		resp, _ := http.Get("http://100.100.100.200/latest/meta-data/ram/security-credentials/")
+		body, _ := ioutil.ReadAll(resp.Body)
+		resp.Body.Close()
+		ROLENAME := string(body)
+		//according to the rolename, get a json file.
+		resp, _ = http.Get("http://100.100.100.200/latest/meta-data/ram/security-credentials/" + ROLENAME)
+		body, _ = ioutil.ReadAll(resp.Body)
+		resp.Body.Close()
+		jsonRaw := body
+
+		//convert json file to map
+		var roleMap map[string]*json.RawMessage
+		json.Unmarshal(jsonRaw, &roleMap)
+
+		//extract related content from map
+		json.Unmarshal(*roleMap["AccessKeyId"], &i.ACCESSKEY)
+		json.Unmarshal(*roleMap["AccessKeySecret"], &i.SECRETKEY)
+		json.Unmarshal(*roleMap["SecurityToken"], &i.TOKEN)
+
+		//get instance name/environment/service/tier
+		i.REGIONID = "cn-shanghai"
+		ecsClient, err := sdk.NewClientWithStsToken(
+			i.REGIONID,
+			i.ACCESSKEY,
+			i.SECRETKEY,
+			i.TOKEN,
+		)
+		client = &ecs.Client{
+			Client: *ecsClient,
+		}
+
+		if err != nil {
+			panic(err)
+		}
+	} else {
+		REGIONID := os.Getenv("ALICLOUD_DEFAULT_REGION")
+		ACCESSKEY := os.Getenv("ALICLOUD_ACCESS_KEY")
+		SECRETKEY := os.Getenv("ALICLOUD_SECRET_KEY")
+		client, err = ecs.NewClientWithAccessKey(
+			REGIONID,
+			ACCESSKEY,
+			SECRETKEY,
+		)
+		if err != nil {
+			panic(err)
+		}
 	}
-	return ecsClient
+	return client
 }
 
 func GetInstancesTotalCount(exportertype string) (totalcount int) {
