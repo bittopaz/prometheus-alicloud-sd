@@ -26,7 +26,7 @@ type Lable struct {
 	Tier    string `json:"tier"`
 }
 
-type Instance struct {
+type alicloudAccessConfig struct {
 	REGIONID  string
 	ACCESSKEY string
 	SECRETKEY string
@@ -34,13 +34,22 @@ type Instance struct {
 }
 
 func EcsClient() (client *ecs.Client) {
-	var i Instance
+	var i alicloudAccessConfig
 	var err error
-	if os.Getenv("ALICLOUD_DEFAULT_REGION") == "" {
+	if os.Getenv("ALICLOUD_DEFAULT_REGION") == "" &&
+		os.Getenv("ALICLOUD_ACCESS_KEY") == "" &&
+		os.Getenv("ALICLOUD_SECRET_KEY") == "" {
+		//get rolename
 		resp, _ := http.Get("http://100.100.100.200/latest/meta-data/ram/security-credentials/")
 		body, _ := ioutil.ReadAll(resp.Body)
 		resp.Body.Close()
 		ROLENAME := string(body)
+
+		//get region-id
+		resp, _ = http.Get("http://100.100.100.200/latest/meta-data/region-id")
+		body, _ = ioutil.ReadAll(resp.Body)
+		resp.Body.Close()
+		i.REGIONID = string(body)
 		//according to the rolename, get a json file.
 		resp, _ = http.Get("http://100.100.100.200/latest/meta-data/ram/security-credentials/" + ROLENAME)
 		body, _ = ioutil.ReadAll(resp.Body)
@@ -57,7 +66,6 @@ func EcsClient() (client *ecs.Client) {
 		json.Unmarshal(*roleMap["SecurityToken"], &i.TOKEN)
 
 		//get instance name/environment/service/tier
-		i.REGIONID = "cn-shanghai"
 		ecsClient, err := sdk.NewClientWithStsToken(
 			i.REGIONID,
 			i.ACCESSKEY,
