@@ -45,7 +45,7 @@ func EcsClient() (client *ecs.Client) {
 		resp.Body.Close()
 		ROLENAME := string(body)
 
-		//get AlicloudRegion-id
+		//get region-id
 		resp, _ = http.Get("http://100.100.100.200/latest/meta-data/region-id")
 		body, _ = ioutil.ReadAll(resp.Body)
 		resp.Body.Close()
