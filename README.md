@@ -2,7 +2,7 @@
 
 ## Set ALICLOUD_SD_TAGS
 
-export ALICLOUD_SD_TAGS=Service,Tier,Env,Loc
+export ALICLOUD_SD_TAGS=Service,Env,Loc
 
 ## How to build
 

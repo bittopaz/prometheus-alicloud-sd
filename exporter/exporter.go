@@ -15,15 +15,14 @@ const PAGESIZE = 100
 
 type NodeInfo struct {
 	Targets []string `json:"targets"`
-	Labels  Lable    `json:"lables"`
+	Labels  Label    `json:"labels"`
 }
 
-type Lable struct {
+type Label struct {
 	Env     string `json:"env"`
 	Job     string `json:"job"`
 	Loc     string `json:"loc"`
 	Service string `json:"service"`
-	Tier    string `json:"tier"`
 }
 
 type alicloudAccessConfig struct {
@@ -66,7 +65,7 @@ func EcsClient() (client *ecs.Client) {
 		json.Unmarshal(*roleMap["AccessKeySecret"], &i.AlicloudSecretKey)
 		json.Unmarshal(*roleMap["SecurityToken"], &i.SecurityToken)
 
-		//get instance name/environment/service/tier
+		//get instance name/environment/service
 		ecsClient, err := sdk.NewClientWithStsToken(
 			i.AlicloudRegionID,
 			i.AlicloudAccessKey,

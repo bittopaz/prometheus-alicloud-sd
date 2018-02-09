@@ -39,9 +39,8 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 					nodeinfo.Labels.Loc = y.TagValue
 				} else if y.TagKey == "Service" {
 					nodeinfo.Labels.Service = y.TagValue
-				} else if y.TagKey == "Tier" {
-					nodeinfo.Labels.Tier = y.TagValue
 				}
+
 				if nodeinfo.Labels.Job == "" {
 					nodeinfo.Labels.Job = "mysql"
 				}
@@ -68,7 +67,6 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 			nodeinfo.Labels.Job = ""
 			nodeinfo.Labels.Loc = ""
 			nodeinfo.Labels.Service = ""
-			nodeinfo.Labels.Tier = ""
 		}
 	}
 	jsonScrapeConfig, err := json.MarshalIndent(nodeinfolist, "", "\t")

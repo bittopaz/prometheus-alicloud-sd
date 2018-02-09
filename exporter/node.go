@@ -17,7 +17,6 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 	totalcount := GetInstancesTotalCount(exporterType)
 
 	for i := 0; i <= (totalcount / PAGESIZE); i++ {
-		fmt.Println(i)
 		request := ecs.CreateDescribeInstancesRequest()
 		request.PageSize = requests.NewInteger(PAGESIZE)
 		request.PageNumber = requests.NewInteger(i + 1)
@@ -27,7 +26,6 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 			fmt.Println(err)
 		}
 		for _, v := range response.Instances.Instance {
-			//fmt.Println(x)
 			for _, y := range v.Tags.Tag {
 				if y.TagKey == "Env" {
 					nodeinfo.Labels.Env = y.TagValue
@@ -37,9 +35,8 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 					nodeinfo.Labels.Loc = y.TagValue
 				} else if y.TagKey == "Service" {
 					nodeinfo.Labels.Service = y.TagValue
-				} else if y.TagKey == "Tier" {
-					nodeinfo.Labels.Tier = y.TagValue
 				}
+
 				if nodeinfo.Labels.Job == "" {
 					nodeinfo.Labels.Job = "node"
 				}
@@ -63,7 +60,6 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 			nodeinfo.Labels.Job = ""
 			nodeinfo.Labels.Loc = ""
 			nodeinfo.Labels.Service = ""
-			nodeinfo.Labels.Tier = ""
 		}
 	}
 	jsonScrapeConfig, err := json.MarshalIndent(nodeinfolist, "", "\t")
