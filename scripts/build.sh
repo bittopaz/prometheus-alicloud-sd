@@ -84,14 +84,14 @@ if [[ -d "${DEV_PLATFORM}" ]]; then
 fi
 
 if [ "${TF_DEV}x" = "x" ]; then
-    # Zip and copy to the dist dir
+    # Tar and copy to the dist dir
     echo "==> Packaging..."
     for PLATFORM in $(find ./pkg -mindepth 1 -maxdepth 1 -type d); do
         OSARCH=$(basename ${PLATFORM})
         echo "--> ${OSARCH}"
 
         pushd $PLATFORM >/dev/null 2>&1
-        zip ../${OSARCH}.zip ./*
+        tar zcf ../${OSARCH}.tar.gz ./*
         popd >/dev/null 2>&1
     done
 fi

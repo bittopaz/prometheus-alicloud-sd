@@ -1,0 +1,153 @@
+2018-01-29 Version: 0.11.0
+1, Support dep
+2, Add 4 usage of credentials for each services
+3, Standard interface naming
+
+2018-01-29 Version: 0.10.0
+1, Add 'notificationChannel' parameter to Push API
+
+2018-01-24 Version: 0.9.3
+1,  Fixed a problem that the ActiveAlert interface name is not standard
+2,  Update ActiveAlert interface : ListProductOfActiveAlert / DisableActiveAlert / EnableActiveAlert
+
+2018-01-24 Version: 0.9.2
+1, Add ActiveAlert API : ListActiveAlertRuleRequest/ListProductOfActiceAlertRequest/EnableActiceAlertRequest/DisableActiceAlertRequest
+
+2018-01-24 Version: 0.9.1
+1. improve: asyncWithChan avoid panic of "write on closed channel"
+2. improve: asyncWithChan support select case usage
+3. bug fix: repeated signature nonce while retry
+4. bug fix: calling request.GetUrl() ahead of client.DoAction() will cause problems
+
+2018-01-24 Version: 0.9.0
+1, Publish domain config interface, allow users to create or delete a domain protect config under DDoS Pro.
+2, Publish domain config query interface, allow users to query a list of domain config or a single domain config.
+3, Publish domain proxy modify interface, allow users to set domain transmit proxy.
+4, Publish domain transmit rule config interface, including modify and delete type.
+5, Publish domain black and white list config interface.
+6, Publish domain cname auto status config interface.
+7, Publish domain certificate upload interface.
+8, Publish domain qps graph query interface.
+9, Publish ip attack events and traffic graph query interface.
+
+
+2018-01-23 Version: 0.8.3
+1, Tesla Dam API release.
+2, Add ActionDiskCheck, ActionDiskMask, ActionDiskRma, HostGets.
+
+
+2018-01-18 Version: 0.8.2
+1. Set default timeout to 10s
+2. Make integration tests more stable
+3. Fix the problem of LocationResolver in concurrency
+4. Modifying the naming specification
+
+2018-01-18 Version: 0.8.1
+1, Update ECS go SDK to catch up with other langs.
+2, DescribeImageSupportInstanceTypes add new param Filter and ActionType
+
+2018-01-16 Version: 0.8.0
+1,  Add TriggerMode param in AddMediaWorkflow.
+2, Add TriggerMode param in QueryMediaWorkflowList/SearchMediaWorkflow/UpdateMediaWorkflow.
+3, Add interface UpdateMediaWorkflowTriggerMode.
+
+2018-01-11 Version: 0.7.8
+1. complete partly missed service codes
+2. add default http method for roa requests
+
+2018-01-11 Version: 0.7.7
+1, Bug fix: Replenish user interface
+
+2018-01-11 Version: 0.7.6
+1, replace photo tag 2000 upgrade to 5000
+2, add TrashQuota
+
+2018-01-11 Version: 0.7.5
+1, Make the json.Unmarshal more robust
+
+2018-01-09 Version: 0.7.4
+1, Add integration tests
+
+2018-01-04 Version: 0.7.3
+1, Remove get entity info API, replaced by get entity instance.
+
+2018-01-03 Version: 0.7.2
+1, Bug fix: fix the ecs unmarshal bug
+
+2018-01-03 Version: 0.7.1
+1, Bug fix: fix the unmarshal bug
+
+2017-12-29 Version: 0.7.0
+1, First release for Domain-intl.
+2, Add interfaces for domain name registration and management.
+
+2017-12-29 Version: 0.6.8
+1, Allow the setting of AcceptFormat in the Request.
+
+2017-12-26 Version: 0.6.5
+1, Add video AI service interface.
+
+2017-12-26 Version: 0.6.4
+1, Add video AI service interface.
+
+2017-12-20 Version: 0.6.3
+1, support tile dataset
+2, use dimension value type to replace isDrillDown
+
+2017-12-20 Version: 0.6.2
+1, support tile dataset
+2, use dimension value type to replace isDrillDown
+
+
+2017-12-19 Version: 0.6.1
+1, InactivatePhotos support customer inactiveTime
+2, support customer tags
+3, ListPhotoTags、ListTags add param lang
+
+2017-12-18 Version: 0.6.0
+1, Add Scdn API.
+
+2017-12-18 Version: 0.5.7
+1, This is the first release of CCC Open API.
+
+2017-12-15 Version: 0.5.6
+1, Update SetReqAuthConfig.
+2, Add Scdn API.
+
+2017-12-15 Version: 0.5.5
+1, fix test cases
+
+2017-12-15 Version: 0.5.4
+1, Add scdn API.
+2, Update SetReqAuthConfig.
+
+2017-12-12 Version: 0.5.1
+1, remove unused fmt.print
+
+2017-12-08 Version: 0.5.0
+1, Add ARMSQueryDataSet, WhereInDimQuery interface.
+
+2017-12-08 Version: 0.4.0
+1, support endpoint.xml resolver
+
+2017-12-08 Version: 0.3.1
+1, Add ARMSQueryDataSet, WhereInDimQuery interface.
+
+2017-12-01 Version: 0.2.2
+1, Fix ineffassign problems
+
+2017-12-01 Version: 0.2.1
+1, Fix capitalizes the first letter in each word of header
+
+2017-11-28 Version: 0.2.0
+1, AK2.0 & StsToken
+
+2017-11-27 Version: 0.1.3
+1, format ft code with gofmt
+
+2017-11-27 Version: 0.1.2
+1, format code with gofmt
+
+2017-11-27 Version: 0.1.1
+1, add glide files
+
