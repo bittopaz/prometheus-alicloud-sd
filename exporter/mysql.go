@@ -38,7 +38,15 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 				} else if y.TagKey == "Loc" {
 					nodeinfo.Labels.Loc = y.TagValue
 				} else if y.TagKey == "Service" {
-					nodeinfo.Labels.Service = y.TagValue
+					if strings.Contains(v.InstanceName, '.beta.') {
+						nodeinfo.Labels.Service = 'beta-' + y.TagValue
+					} else if strings.Contains(v.InstanceName, '.aux.') {
+						nodeinfo.Labels.Service = 'aux-' + y.TagValue
+					} else if strings.Contains(v.InstanceName, '.prod.') {
+						nodeinfo.Labels.Service = 'prod-' + y.TagValue
+					} else {
+						nodeinfo.Labels.Service = y.TagValue
+					}
 				}
 
 				if nodeinfo.Labels.Job == "" {
