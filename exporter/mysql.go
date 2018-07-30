@@ -23,6 +23,9 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 		request.PageSize = requests.NewInteger(PAGESIZE)
 		request.PageNumber = requests.NewInteger(i + 1)
 		request.InstanceName = "mysql*"
+		request.Tag1Key = "Monitoring"
+		request.Tag1Value = "true"
+		request.Status = "Running"
 		response, err := ecsClient.DescribeInstances(request)
 		if err != nil {
 			panic(err)
@@ -35,8 +38,8 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 					nodeinfo.Labels.Env = y.TagValue
 				} else if y.TagKey == "Job" {
 					nodeinfo.Labels.Job = y.TagValue
-				} else if y.TagKey == "Loc" {
-					nodeinfo.Labels.Loc = y.TagValue
+				} else if y.TagKey == "Component" {
+					nodeinfo.Labels.Component = y.TagValue
 				} else if y.TagKey == "Service" {
 					nodeinfo.Labels.Service = y.TagValue
 				}
@@ -48,7 +51,6 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 
 			for m, n := range nodeinfolist {
 				if n.Labels.Env == nodeinfo.Labels.Env && n.Labels.Service == nodeinfo.Labels.Service && n.Labels.Service != "" {
-					nodeinfolist[m].Targets = append(nodeinfolist[m].Targets, v.InstanceName+":9100")
 					nodeinfolist[m].Targets = append(nodeinfolist[m].Targets, v.InstanceName+":9104")
 					flag = true
 					break
@@ -58,14 +60,13 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 			}
 
 			if flag == false {
-				nodeinfo.Targets = append(nodeinfo.Targets, v.InstanceName+":9100")
 				nodeinfo.Targets = append(nodeinfo.Targets, v.InstanceName+":9104")
 				nodeinfolist = append(nodeinfolist, nodeinfo)
 			}
 			nodeinfo.Targets = nil
 			nodeinfo.Labels.Env = ""
 			nodeinfo.Labels.Job = ""
-			nodeinfo.Labels.Loc = ""
+			nodeinfo.Labels.Component = ""
 			nodeinfo.Labels.Service = ""
 		}
 	}

@@ -21,8 +21,8 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 		request.PageSize = requests.NewInteger(PAGESIZE)
 		request.PageNumber = requests.NewInteger(i + 1)
 		request.Status = "Running"
-		request.Tag3Key = "Monitoring"
-		request.Tag3Value = "true"
+		request.Tag1Key = "Monitoring"
+		request.Tag1Value = "true"
 		response, err := ecsClient.DescribeInstances(request)
 		if err != nil {
 			fmt.Println(err)
@@ -33,8 +33,8 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 					nodeinfo.Labels.Env = y.TagValue
 				} else if y.TagKey == "Job" {
 					nodeinfo.Labels.Job = y.TagValue
-				} else if y.TagKey == "Loc" {
-					nodeinfo.Labels.Loc = y.TagValue
+				} else if y.TagKey == "Component" {
+					nodeinfo.Labels.Component = y.TagValue
 				} else if y.TagKey == "Service" {
 					nodeinfo.Labels.Service = y.TagValue
 				}
@@ -60,7 +60,7 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 			nodeinfo.Targets = nil
 			nodeinfo.Labels.Env = ""
 			nodeinfo.Labels.Job = ""
-			nodeinfo.Labels.Loc = ""
+			nodeinfo.Labels.Component = ""
 			nodeinfo.Labels.Service = ""
 		}
 	}
