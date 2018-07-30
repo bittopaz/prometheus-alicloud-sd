@@ -21,8 +21,8 @@ func DiscoveryAlicloudNode(filePath, exporterType string) {
 		request.PageSize = requests.NewInteger(PAGESIZE)
 		request.PageNumber = requests.NewInteger(i + 1)
 		request.Status = "Running"
-		request.Tag3Key = "Monitoring"
-		request.Tag3Value = "true"
+		request.Tag1Key = "Monitoring"
+		request.Tag1Value = "true"
 		response, err := ecsClient.DescribeInstances(request)
 		if err != nil {
 			fmt.Println(err)

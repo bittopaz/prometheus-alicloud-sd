@@ -23,8 +23,8 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 		request.PageSize = requests.NewInteger(PAGESIZE)
 		request.PageNumber = requests.NewInteger(i + 1)
 		request.InstanceName = "mysql*"
-		request.Tag2Key = "Monitoring"
-		request.Tag2Value = "false"
+		request.Tag1Key = "Monitoring"
+		request.Tag1Value = "true"
 		request.Status = "Running"
 		response, err := ecsClient.DescribeInstances(request)
 		if err != nil {
