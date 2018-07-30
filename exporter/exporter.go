@@ -19,10 +19,10 @@ type NodeInfo struct {
 }
 
 type Label struct {
-	Env     string `json:"env"`
-	Job     string `json:"job"`
-	Loc     string `json:"loc"`
-	Service string `json:"service"`
+	Env       string `json:"env"`
+	Job       string `json:"job"`
+	Component string `json:"component"`
+	Service   string `json:"service"`
 }
 
 type alicloudAccessConfig struct {

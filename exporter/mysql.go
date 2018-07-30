@@ -24,7 +24,7 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 		request.PageNumber = requests.NewInteger(i + 1)
 		request.InstanceName = "mysql*"
 		request.Tag2Key = "Monitoring"
-		request.Tag2Value = "true"
+		request.Tag2Value = "false"
 		request.Status = "Running"
 		response, err := ecsClient.DescribeInstances(request)
 		if err != nil {
@@ -38,8 +38,8 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 					nodeinfo.Labels.Env = y.TagValue
 				} else if y.TagKey == "Job" {
 					nodeinfo.Labels.Job = y.TagValue
-				} else if y.TagKey == "Loc" {
-					nodeinfo.Labels.Loc = y.TagValue
+				} else if y.TagKey == "Component" {
+					nodeinfo.Labels.Component = y.TagValue
 				} else if y.TagKey == "Service" {
 					nodeinfo.Labels.Service = y.TagValue
 				}
@@ -66,7 +66,7 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 			nodeinfo.Targets = nil
 			nodeinfo.Labels.Env = ""
 			nodeinfo.Labels.Job = ""
-			nodeinfo.Labels.Loc = ""
+			nodeinfo.Labels.Component = ""
 			nodeinfo.Labels.Service = ""
 		}
 	}
