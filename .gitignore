@@ -17,3 +17,5 @@ modules-dev/
 
 website/vendor
 test.json
+pkg/
+dist/
