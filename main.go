@@ -12,7 +12,7 @@ func main() {
 	var filePath string
 	var exporterType string
 	flag.StringVar(&filePath, "f", "", "Output filename")
-	flag.StringVar(&exporterType, "t", "", "exporter type(node/mysql)")
+	flag.StringVar(&exporterType, "t", "", "exporter type(node/mysql/redis)")
 	flag.Parse()
 
 	if filePath == "" {
@@ -24,6 +24,8 @@ func main() {
 		exporter.DiscoveryAlicloudNode(filePath, exporterType)
 	} else if exporterType == "mysql" {
 		exporter.DiscoveryAlicloudMysql(filePath, exporterType)
+	} else if exporterType == "redis" {
+		exporter.DiscoveryAlicloudRedis(filePath, exporterType)
 	} else if exporterType == "" {
 		fmt.Fprintf(os.Stderr, "required arguments -t must pass in.")
 		os.Exit(1)

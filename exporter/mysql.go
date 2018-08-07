@@ -15,10 +15,9 @@ func DiscoveryAlicloudMysql(filePath, exporterType string) {
 	var flag bool = false
 
 	totalcount := GetInstancesTotalCount(exporterType)
-	ecsClient := EcsClient()
+	ecsClient := NewEcsClient()
 
 	for i := 0; i <= (totalcount / PAGESIZE); i++ {
-		fmt.Println(i)
 		request := ecs.CreateDescribeInstancesRequest()
 		request.PageSize = requests.NewInteger(PAGESIZE)
 		request.PageNumber = requests.NewInteger(i + 1)

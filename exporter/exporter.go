@@ -9,6 +9,7 @@ import (
 
 	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
 	"github.com/aliyun/alibaba-cloud-sdk-go/services/ecs"
+	"github.com/aliyun/alibaba-cloud-sdk-go/services/r-kvstore"
 )
 
 const PAGESIZE = 100
@@ -30,15 +31,14 @@ type alicloudAccessConfig struct {
 	AlicloudAccessKey string
 	AlicloudSecretKey string
 	SecurityToken     string
+	Env               string
 }
 
-func EcsClient() (client *ecs.Client) {
-	var i alicloudAccessConfig
-	var err error
+func (i *alicloudAccessConfig) init() {
+	//get rolename
 	if os.Getenv("ALICLOUD_DEFAULT_REGION") == "" ||
 		os.Getenv("ALICLOUD_ACCESS_KEY") == "" ||
 		os.Getenv("ALICLOUD_SECRET_KEY") == "" {
-		//get rolename
 		resp, _ := http.Get("http://100.100.100.200/latest/meta-data/ram/security-credentials/")
 		body, _ := ioutil.ReadAll(resp.Body)
 		resp.Body.Close()
@@ -64,29 +64,67 @@ func EcsClient() (client *ecs.Client) {
 		json.Unmarshal(*roleMap["AccessKeyId"], &i.AlicloudAccessKey)
 		json.Unmarshal(*roleMap["AccessKeySecret"], &i.AlicloudSecretKey)
 		json.Unmarshal(*roleMap["SecurityToken"], &i.SecurityToken)
+		i.Env = "remote"
+	} else {
+		i.AlicloudRegionID = os.Getenv("ALICLOUD_DEFAULT_REGION")
+		i.AlicloudAccessKey = os.Getenv("ALICLOUD_ACCESS_KEY")
+		i.AlicloudSecretKey = os.Getenv("ALICLOUD_SECRET_KEY")
+		i.Env = "local"
+	}
+}
 
-		//get instance name/environment/service
-		ecsClient, err := sdk.NewClientWithStsToken(
-			i.AlicloudRegionID,
-			i.AlicloudAccessKey,
-			i.AlicloudSecretKey,
-			i.SecurityToken,
+func NewEcsClient() (client *ecs.Client) {
+	var err error
+	var config alicloudAccessConfig
+	config.init()
+	if config.Env == "remote" {
+		sdkClient, err := sdk.NewClientWithStsToken(
+			config.AlicloudRegionID,
+			config.AlicloudAccessKey,
+			config.AlicloudSecretKey,
+			config.SecurityToken,
 		)
 		client = &ecs.Client{
-			Client: *ecsClient,
+			Client: *sdkClient,
 		}
-
 		if err != nil {
 			panic(err)
 		}
 	} else {
-		AlicloudRegionID := os.Getenv("ALICLOUD_DEFAULT_REGION")
-		AlicloudAccessKey := os.Getenv("ALICLOUD_ACCESS_KEY")
-		AlicloudSecretKey := os.Getenv("ALICLOUD_SECRET_KEY")
 		client, err = ecs.NewClientWithAccessKey(
-			AlicloudRegionID,
-			AlicloudAccessKey,
-			AlicloudSecretKey,
+			config.AlicloudRegionID,
+			config.AlicloudAccessKey,
+			config.AlicloudSecretKey,
+		)
+		if err != nil {
+			panic(err)
+		}
+	}
+	return client
+}
+
+func NewRedisClient() (client *r_kvstore.Client) {
+	var err error
+	var config alicloudAccessConfig
+	config.init()
+	if config.Env == "remote" {
+		sdkClient, err := sdk.NewClientWithStsToken(
+			config.AlicloudRegionID,
+			config.AlicloudAccessKey,
+			config.AlicloudSecretKey,
+			config.SecurityToken,
+		)
+		client = &r_kvstore.Client{
+			Client: *sdkClient,
+		}
+		if err != nil {
+			panic(err)
+		}
+	} else {
+		client, err = r_kvstore.NewClientWithAccessKey(
+			config.AlicloudRegionID,
+			config.AlicloudAccessKey,
+			config.AlicloudSecretKey,
 		)
 		if err != nil {
 			panic(err)
@@ -96,7 +134,7 @@ func EcsClient() (client *ecs.Client) {
 }
 
 func GetInstancesTotalCount(exportertype string) (totalcount int) {
-	ecsClient := EcsClient()
+	ecsClient := NewEcsClient()
 	request := ecs.CreateDescribeInstancesRequest()
 	if exportertype == "node" {
 		request.Tag3Key = "Monitoring"
